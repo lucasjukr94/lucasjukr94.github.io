@@ -1,0 +1,161 @@
+*{
+	font-family:'Open Sans', sans-serif;
+	font-size:20px;
+}
+
+li{
+	display:inline;
+	padding:2em;
+}
+
+li:hover{
+	color:white;
+}
+
+#Home:active{
+	font-weight:bold;
+}
+
+#Sobre:active{
+	font-weight:bold;
+}
+
+#Portifolio:active{
+	font-weight:bold;
+}
+
+#Contato:active{
+	font-weight:bold;
+}
+
+a{
+	padding:0.5em;
+	font-size:12px;
+}
+
+a:hover{
+	color:blue;
+}
+
+img{
+	vertical-align:text-top;
+}
+
+.mainnav{
+	background-color:rgba(150,150,150,0.5);
+	width:100%;
+	padding:0.5em;
+	margin:-0.5em;
+}
+
+.navigation{
+	width:100%;
+	height:200px;
+	text-align:center;
+}
+
+.first-page{
+	/*background-color:rgba(33, 29, 29, 0.87)*/
+	background-image:url("http://www.webhooks.io/static/images/abstract_bg.jpg");
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;
+	width:100%;
+	height:960px;
+	margin:-0.5em;
+	padding:0.5em;
+}
+
+.footer{
+	background-image:url("http://www.buildrightuk.com/masters/images/footer.png");
+	background-repeat:no-repeat;
+	background-size:cover;
+	position:fixed;
+	opacity:0.8;
+	bottom:0;
+	width:100%;
+	height:200px;
+	padding:0.5em;
+	margin:-0.5em;
+}
+
+.redesocial{
+	text-align:center;
+}
+
+#eu{
+	border-radius: 100px; 
+	-moz-border-radius: 100px; 
+	-webkit-border-radius: 100px;
+}
+
+#eu:hover{
+	width:210px;
+	height:210px;
+}
+
+#welcome{
+	font-size:30px;
+}
+
+.corpo{
+	width:100%;
+	height:300px;
+	padding:0.5em;
+	margin:-0.5em;
+	text-align:center;
+}
+
+.seta{
+	width:100%;
+	height:50px;
+	padding:0.5em;
+	margin:-0.5em;
+	text-align:center;
+	opacity:0.5;
+}
+
+.seta:hover{
+	opacity:1;
+}
+
+.second-page{
+	background-image:url("imagens/backcnz.jpg");
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;
+	padding:0.5em;
+	margin:-0.5em;
+	width:100%;
+	height:960px;
+}
+
+.tabela{
+	width:100%;
+	text-align:center;
+}
+
+.third-page{
+	background-image:url("imagens/green.jpg");
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;
+	padding:0.5em;
+	margin:-0.5em;
+	width:100%;
+	height:960px;
+}
+
+.banner{
+	background-image:url("imagens/back.jpg");
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;
+	padding:0.5em;
+	margin:-0.5em;
+	width:100%;
+	height:200px;
+	border: 5px solid #665544;
+	text-align:center;
+	color:gray;
+}
