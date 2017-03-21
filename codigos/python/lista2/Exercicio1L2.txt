@@ -1,0 +1,13 @@
+vec=[]
+i=0
+while i<10:
+    valor=int(input("Digite um valor: "))
+    vec.append(valor)
+    i=i+1
+print(vec)
+invec=[]
+j=0
+while j<10:
+    invec.append(vec[9-j])
+    j=j+1
+print(invec)

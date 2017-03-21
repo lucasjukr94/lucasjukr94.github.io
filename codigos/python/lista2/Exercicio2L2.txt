@@ -1,0 +1,21 @@
+nA = int(input("Tamanho do vetor A:"))
+vec1 = [x for x in range(nA)]
+for i in range(nA):
+    n = int(input("Digite um valor do vetor 1:"))
+    vec1[i] = n
+
+nB = int(input("Tamanho do vetor B:"))
+vec2 = [y for y in range(nB)]
+for j in range(nB):
+    m = int(input("Digite um valor do vetor 2:"))
+    vec2[j] = m
+
+soma = nA+nB
+vec3 = [z for z in range(soma)]
+for k in range(soma):
+    if k<=nA:
+        vec3[k] = vec1[k]
+    else:
+        vec3[k] = vec2[k-nA]
+    print(vec3[k])
+

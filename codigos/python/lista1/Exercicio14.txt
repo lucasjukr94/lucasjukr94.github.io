@@ -1,0 +1,26 @@
+Max = int(input("Digite um valor:"))
+Min = int(input("Digite um valor:"))
+if Max < Min:
+    a = Max
+    Max = Min
+    Min = a
+x0=0
+x1=1
+n=0
+if Max==1 and x0>Min:
+    print(x0)
+elif Max==2 and x1>Min:
+        print(x0)
+        print(x1)
+elif Max>2:
+    if x1>Min:
+        print(x0)
+        print(x1)
+    while n<Max-2:
+        x2 = x1 + x0
+        if x2>Min:
+            print(x2)
+        x0=x1
+        x1=x2
+        n=n+1
+print("Fim do programa")

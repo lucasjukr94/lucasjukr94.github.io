@@ -1,0 +1,8 @@
+inteiro = int(input("Digite um valor inteiro:"))
+n=0
+real1=0
+while n < inteiro:
+    real = float(input("Digite um valor real:"))
+    real1 = real1 + real
+    n = n+1
+print("A soma dos valores reais é:%f" %real1)

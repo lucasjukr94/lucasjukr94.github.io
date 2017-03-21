@@ -1,0 +1,22 @@
+from random import randint
+valor = int(input("Digite um valor de referencia de 0 a 500: "))
+menor=0
+maior=500
+i=0
+vec=[]
+while i==0:
+     chute = randint(menor,maior)
+     vec.append(chute)
+     print("O valor é %d?" %chute)
+     resposta = str(input("acertou/maior/menor?"))
+     if resposta == "acertou":
+          print("Fim do jogo")
+          i=1
+     elif resposta == "maior":
+          menor = chute
+          chute = randint(menor,maior)
+     elif resposta == "menor":
+          maior = chute
+          chute = randint(menor,maior)
+print("A quantidade de tentativas foi", len(vec))
+print(vec)
