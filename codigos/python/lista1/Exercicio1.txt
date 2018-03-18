@@ -1,5 +1,0 @@
-num = int(input("Digite um valor:"))
-if num<0:
-    print("negativo")
-else:
-    print("positivo")
