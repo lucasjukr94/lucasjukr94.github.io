@@ -13,74 +13,77 @@
 			a:visited{
 				color:white;
 			}
-			a:hover{
-				color:lightgray;
-			}
 			a:link{
 				text-decoration:none;
 			}
 			a:active{
 				color:white;
 			}
-			.navbar{
-				display:inline;
-				color:white;
-			}
-			.tree-head{
-				display:inline;
-				margin-right:20px;
-				padding-top:10px;
-			}
 			.navbar-nivel2{
 				display:none;
-				position:fixed;
 				color:white;
 				background-color:rgb(95, 95, 95);
 				text-align:left;
 				padding:10px;
-				margin-left:inherit;
+				margin-top:-5px;
+				left:inherit;
+				max-width:160px;
 			}
 			.navbar-nivel2:hover{
 				display:block;
 			}
 			.link-head:hover + .navbar-nivel2{
 				display:block;
+				background-color:rgb(150, 150, 150);
+			}
+			.link-head:hover{
+				background-color:rgb(150, 150, 150);
 			}
 			.navigation{
 				background-color:rgb(95, 95, 95);
-				width:50%;
-				text-align:center;
+				width:100%;
+				height:50px;
 			}
 			body{
-				padding:0px;
 				margin:0px;
+			}
+			.wrapper{
+				width:100px;
+				float:left;
+				text-align:left;
+				margin-left:15%;
+				margin-top:15px;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="navigation">
-			<ul class="navbar">
-				<li class="tree-head">
+			<div class="wrapper">
+				<a href="#" class="link-head">
 					Home
-				</li>
-				<li class="tree-head">
+				</a>
+			</div>
+			<div class="wrapper">
+				<a href="#" class="link-head">
 					Cadastro
-				</li>
-				<li class="tree-head">
+				</a>
+			</div>
+			<div class="wrapper">
+				<a href="#" class="link-head">
 					Contato
-				</li>
-				<li class="tree-head">
-					<a href="#" class="link-head">
-						Portfolio
-					</a>
-					<ul class="navbar-nivel2">
-						<li class="treebody">Hardware</li>
-						<li class="treebody">Software</li>
-						<li class="treebody">Design</li>
-						<li class="treebody">Games</li>
-					</ul>
-				</li>
-			<ul>
+				</a>
+			</div>
+			<div class="wrapper">
+				<a href="#" class="link-head">
+					Portfolio
+				</a>
+				<ul class="navbar-nivel2">
+					<li class="treebody">Hardware</li>
+					<li class="treebody">Software</li>
+					<li class="treebody">Design</li>
+					<li class="treebody">Games</li>
+				</ul>
+			</div>
 		<div>
 	</body>
 </html>
