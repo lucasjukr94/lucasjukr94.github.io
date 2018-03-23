@@ -3,37 +3,84 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Portfolio</title>
-		
-		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-		<link rel="stylesheet" href="AdminLTE/Content/alte/bootstrap/css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-		<link rel="stylesheet" href="AdminLTE/Content/alte/plugins/datatables/dataTables.bootstrap.css"/>
-		<link rel="stylesheet" href="AdminLTE/Content/alte/dist/css/AdminLTE.min.css"/>
-		<link rel="stylesheet" href="AdminLTE/Content/alte/dist/css/skins/_all-skins.min.css"/>
-		<link rel="stylesheet" href="AdminLTE/Content/css/jquery-ui.min.css"/>
-		<link rel="stylesheet" href="AdminLTE/Content/alte/plugins/iCheck/square/green.css"/>
-		<link rel="stylesheet" href="AdminLTE/Content/alte/plugins/datatables/dataTables.bootstrap.css"/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="../../Content/angularjs/angular.min.js"></script>
-		<script src="/Content/alte/plugins/jQuery/jQuery-2.1.4.min.js"></script>
-		<!--input mask do Robin Herbots-->
-		<!---->
-		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-		<script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script><!---->
+		<style>
+			*{
+				font-family:Calibri
+			}
+			li{
+				list-style-type:none;
+			}
+			a:visited{
+				color:white;
+			}
+			a:hover{
+				color:lightgray;
+			}
+			a:link{
+				text-decoration:none;
+			}
+			a:active{
+				color:white;
+			}
+			.navbar{
+				display:inline;
+				color:white;
+			}
+			.tree-head{
+				display:inline;
+				margin-right:20px;
+				padding-top:10px;
+			}
+			.navbar-nivel2{
+				display:none;
+				position:fixed;
+				color:white;
+				background-color:rgb(95, 95, 95);
+				text-align:left;
+				padding:10px;
+				margin-left:inherit;
+			}
+			.navbar-nivel2:hover{
+				display:block;
+			}
+			.link-head:hover + .navbar-nivel2{
+				display:block;
+			}
+			.navigation{
+				background-color:rgb(95, 95, 95);
+				width:50%;
+				text-align:center;
+			}
+			body{
+				padding:0px;
+				margin:0px;
+			}
+		</style>
 	</head>
 	<body>
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="box">
-					<div class="box-header">
-						<h3>Teste AdminLTE</h3>
-					</div>
-					<div class="box-body">
-						teste
-					</div>
-				</div>
-			</div>
-		</div>
+		<div class="navigation">
+			<ul class="navbar">
+				<li class="tree-head">
+					Home
+				</li>
+				<li class="tree-head">
+					Cadastro
+				</li>
+				<li class="tree-head">
+					Contato
+				</li>
+				<li class="tree-head">
+					<a href="#" class="link-head">
+						Portfolio
+					</a>
+					<ul class="navbar-nivel2">
+						<li class="treebody">Hardware</li>
+						<li class="treebody">Software</li>
+						<li class="treebody">Design</li>
+						<li class="treebody">Games</li>
+					</ul>
+				</li>
+			<ul>
+		<div>
 	</body>
 </html>
