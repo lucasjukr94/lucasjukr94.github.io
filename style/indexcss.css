@@ -22,6 +22,7 @@ a:active{
 	margin-top:-5px;
 	left:inherit;
 	width:150px;
+	position:absolute;
 }
 .navbar-nivel2:hover{
 	display:block;
@@ -55,4 +56,39 @@ body{
 }
 .wrapper:hover{
 	background-color:rgb(95, 95, 95);
+}
+
+.content{
+	
+}
+
+.col-10{
+	width:100%;
+}
+.col-9{
+	width:90%;
+}
+.col-8{
+	width:80%;
+}
+.col-7{
+	width:70%;
+}
+.col-6{
+	width:60%;
+}
+.col-5{
+	width:50%;
+}
+.col-4{
+	width:40%;
+}
+.col-3{
+	width:30%;
+}
+.col-2{
+	width:20%;
+}
+.col-1{
+	width:10%;
 }
