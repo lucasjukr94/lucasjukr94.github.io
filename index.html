@@ -25,7 +25,8 @@
   <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -355,21 +356,20 @@
   </header>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="content">
-		  <div class="row">
+  <div class="content-wrapper" id="contentWrapperChanger">
+    <section class="content" style="background-image:url('background.png');background-repeat: no-repeat;background-size: cover;opacity:0.5;height:100vh;">
+		<div class="row">
 			<div class="col-xs-12">
+				<div class="box">
+					<div class="box-header">
+					</div>
+					<div class="box-body">
+						<button type="button" onclick="changeContentWrapper(1);">Change</button>
+					</div>
+				</div>
 			</div>
 		  </div>
-	  </div>
     </section>
-
-    <!-- Main content -->
-    <section class="content">
-    </section>
-    <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -608,5 +608,21 @@
 <script src="dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+
+<script>
+	function changeContentWrapper(page){
+		switch(page){
+			case 1:
+				$("#contentWrapperChanger").load("timeline.html");
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+		}
+	}
+</script>
 </body>
 </html>
