@@ -356,15 +356,15 @@
   </header>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper" id="contentWrapperChanger">
-    <section class="content" style="background-image:url('background.png');background-repeat: no-repeat;background-size: cover;opacity:0.5;height:100vh;">
+  <div class="content-wrapper" id="contentWrapperChanger" style="background-image:url('background.png');background-repeat: no-repeat;background-size: cover;opacity:0.5;height:100vh;">
+    <section class="content">
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="box">
 					<div class="box-header">
 					</div>
 					<div class="box-body">
-						<button type="button" onclick="changeContentWrapper(1);">Change</button>
+						<button type="button" onclick="changeContentWrapper(2);">Change</button>
 					</div>
 				</div>
 			</div>
@@ -613,9 +613,12 @@
 	function changeContentWrapper(page){
 		switch(page){
 			case 1:
-				$("#contentWrapperChanger").load("timeline.html");
+				document.getElementById("contentWrapperChanger").style.backgroundImage = "url('background.png')";
+				$("#contentWrapperChanger").load("about.html");
 				break;
 			case 2:
+				document.getElementById("contentWrapperChanger").style.backgroundImage = "url('background2.jpg')";
+				$("#contentWrapperChanger").load("timeline.html");
 				break;
 			case 3:
 				break;
