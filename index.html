@@ -135,7 +135,7 @@
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu" style="max-height:100%;">
                   <li class="active"><!-- start message -->
-                    <a href="#" style="color:black;">
+                    <a href="#" style="color:black;" onclick="changeContentWrapper(1);return false;">
 						<div class="pull-left;">
 							About
 						</div>
@@ -143,7 +143,7 @@
                   </li>
                   <!-- end message -->
                   <li class="active">
-                    <a href="#" style="color:black;">
+                    <a href="#" style="color:black;" onclick="changeContentWrapper(2);return false;">
 						<div class="pull-left;">
 							Timeline
 						</div>
@@ -325,14 +325,14 @@
               <li class="user-body">
                 <div class="row">
                   <div class="col-xs-4 text-center">
-                    <a href="#">
+                    <a href="https://github.com/lucasjukr94">
 						<div style="background-color:lightgray;border-radius:25px;">
 							<span><i class="fa fa-github"></i></span>
 						</div>
 					</a>
                   </div>
                   <div class="col-xs-4 text-center">
-					<a href="#">
+					<a href="https://www.facebook.com/lucas.ju.5">
 						<div style="background-color:lightgray;border-radius:25px;">
 							<span><i class="fa fa-facebook"></i></span>
 						</div>
@@ -357,23 +357,10 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper" id="contentWrapperChanger" style="background-image:url('background.png');background-repeat: no-repeat;background-size: cover;height:100vh;">
-    <section class="content">
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="box">
-					<div class="box-header">
-					</div>
-					<div class="box-body">
-						<button type="button" onclick="changeContentWrapper(2);">Change</button>
-					</div>
-				</div>
-			</div>
-		  </div>
-	</section>
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    Desenvolvido por Lucas Jeon com AdminLTE e sustentado por &nbsp;<span><i class="fa fa-github"></i></span>&nbsp;github.com
+    Developed by Lucas Jeon with <b>Admin</b>LTE and mantained by &nbsp;<span><i class="fa fa-github"></i></span>&nbsp;github.com
   </footer>
 
   <!-- Control Sidebar -->
@@ -606,14 +593,16 @@
 <script src="dist/js/demo.js"></script>
 
 <script>
+	$(document).ready(function(){
+		changeContentWrapper(1);
+	});
+
 	function changeContentWrapper(page){
 		switch(page){
 			case 1:
-				document.getElementById("contentWrapperChanger").style.backgroundImage = "url('background.png')";
 				$("#contentWrapperChanger").load("about.html");
 				break;
 			case 2:
-				document.getElementById("contentWrapperChanger").style.backgroundImage = "url('background2.jpg')";
 				$("#contentWrapperChanger").load("timeline.html");
 				break;
 			case 3:
