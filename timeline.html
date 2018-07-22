@@ -226,45 +226,49 @@
 	})
 	
 	function Timer(){
-		for(var i=0;i<6;i++){
-			document.getElementsByClassName("listPointStyle")[i].style.backgroundColor = "#0073b7";
+		try{
+			for(var i=0;i<6;i++){
+				document.getElementsByClassName("listPointStyle")[i].style.backgroundColor = "#0073b7";
+			}
+			document.getElementsByClassName("listPointStyle")[movie].style.backgroundColor = "lightblue";
+			switch(movie){
+				case 0:
+					titleMovie = "1994";
+					textoMovie = "Born in South Korea";
+					movie++;
+					break;
+				case 1:
+					titleMovie = "1997";
+					textoMovie = "Came to live in Brazil";
+					movie++;
+					break;
+				case 2:
+					titleMovie = "2012";
+					textoMovie = "Graduated at 'Objetivo' High School<br/>Joined UNIFESP College - Chemical Engineering Degree";
+					movie++;
+					break;
+				case 3:
+					titleMovie = "2016";
+					textoMovie = "Left UNIFESP College<br/>Joined FATEC College - System Analysis and Software Development Degree";
+					movie++;
+					break;
+				case 4:
+					titleMovie = "2017";
+					textoMovie = "Internship at Lotus - factoring company, as BI developer with asp.net mvc";
+					movie++;
+					break;
+				case 5:
+					titleMovie = "2018";
+					textoMovie = "Internship at Lotus - factoring company, as BI developer with asp.net mvc<br/>Freelance activities";
+					movie = 0;
+					break;
+			}
+			document.getElementById("movieInner").style.display = "none";
+			document.getElementById("movieInner").innerHTML = "<p style='font-size:20px;'><b>" + titleMovie + "</b></p><p>" + textoMovie + "</p>";
+			$("#movieInner").fadeIn('slow');
+		}catch(Exception){
+			StopTimer();
 		}
-		document.getElementsByClassName("listPointStyle")[movie].style.backgroundColor = "lightblue";
-		switch(movie){
-			case 0:
-				titleMovie = "1994";
-				textoMovie = "Born in South Korea";
-				movie++;
-				break;
-			case 1:
-				titleMovie = "1997";
-				textoMovie = "Came to live in Brazil";
-				movie++;
-				break;
-			case 2:
-				titleMovie = "2012";
-				textoMovie = "Graduated at 'Objetivo' High School<br/>Joined UNIFESP College - Chemical Engineering Degree";
-				movie++;
-				break;
-			case 3:
-				titleMovie = "2016";
-				textoMovie = "Left UNIFESP College<br/>Joined FATEC College - System Analysis and Software Development Degree";
-				movie++;
-				break;
-			case 4:
-				titleMovie = "2017";
-				textoMovie = "Internship at Lotus - factoring company, as BI developer with asp.net mvc";
-				movie++;
-				break;
-			case 5:
-				titleMovie = "2018";
-				textoMovie = "Internship at Lotus - factoring company, as BI developer with asp.net mvc<br/>Freelance activities";
-				movie = 0;
-				break;
-		}
-		document.getElementById("movieInner").style.display = "none";
-		document.getElementById("movieInner").innerHTML = "<p style='font-size:20px;'><b>" + titleMovie + "</b></p><p>" + textoMovie + "</p>";
-		$("#movieInner").fadeIn('slow');
 	}
 	
 	function StopTimer(){
