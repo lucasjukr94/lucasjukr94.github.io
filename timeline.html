@@ -222,9 +222,14 @@
 	
 	$(document).ready(function(){
 		$("#timeline").fadeIn();
+		document.getElementsByClassName("listPointStyle")[0].style.backgroundColor = "lightblue";
 	})
 	
 	function Timer(){
+		for(var i=0;i<6;i++){
+			document.getElementsByClassName("listPointStyle")[i].style.backgroundColor = "#0073b7";
+		}
+		document.getElementsByClassName("listPointStyle")[movie].style.backgroundColor = "lightblue";
 		switch(movie){
 			case 0:
 				titleMovie = "1994";
@@ -268,6 +273,10 @@
 	
 	function changeMovie(time){
 		movie = time;
+		for(var i=0;i<6;i++){
+			document.getElementsByClassName("listPointStyle")[i].style.backgroundColor = "#0073b7";
+		}
+		document.getElementsByClassName("listPointStyle")[movie].style.backgroundColor = "lightblue";
 		switch(movie){
 			case 0:
 				titleMovie = "1994";
