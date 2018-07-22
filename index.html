@@ -160,13 +160,6 @@
 						</div>
                     </a>
                   </li>
-                  <li class="active">
-                    <a href="#" style="color:black;" onclick="changeContentWrapper(4);return false;">
-						<div class="pull-left;">
-							Others
-						</div>
-                    </a>
-                  </li>
                 </ul>
               </li>
             </ul>
@@ -180,7 +173,7 @@
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu" style="max-height:100%;">
                   <li class="active"><!-- start message -->
-                    <a href="#" style="color:black;">
+                    <a href="https://www.facebook.com/lucas.ju.5" style="color:black;" target="_blank">
 						<div class="pull-left;">
 							facebook
 						</div>
@@ -195,16 +188,9 @@
                     </a>
                   </li>
                   <li class="active">
-                    <a href="#" style="color:black;">
+                    <a href="https://github.com/lucasjukr94" style="color:black;" target="_blank">
 						<div class="pull-left;">
 							github
-						</div>
-                    </a>
-                  </li>
-                  <li class="active">
-                    <a href="#" style="color:black;">
-						<div class="pull-left;">
-							gmail
 						</div>
                     </a>
                   </li>
@@ -329,14 +315,14 @@
               <li class="user-body">
                 <div class="row">
                   <div class="col-xs-4 text-center">
-                    <a href="https://github.com/lucasjukr94">
+                    <a href="https://github.com/lucasjukr94" target="_blank">
 						<div style="background-color:lightgray;border-radius:25px;">
 							<span><i class="fa fa-github"></i></span>
 						</div>
 					</a>
                   </div>
                   <div class="col-xs-4 text-center">
-					<a href="https://www.facebook.com/lucas.ju.5">
+					<a href="https://www.facebook.com/lucas.ju.5" target="_blank">
 						<div style="background-color:lightgray;border-radius:25px;">
 							<span><i class="fa fa-facebook"></i></span>
 						</div>
@@ -360,7 +346,7 @@
   </header>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper" id="contentWrapperChanger" style="background-image:url('background.png');background-repeat: no-repeat;background-size: cover;height:100vh;">
+  <div class="content-wrapper" id="contentWrapperChanger" style="background-image:url('background.png');background-repeat: repeat;background-size: cover;height:100vh;">
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -427,9 +413,6 @@
 				break;
 			case 3:
 				$("#contentWrapperChanger").load("tools.html");
-				break;
-			case 4:
-				$("#contentWrapperChanger").load("others.html");
 				break;
 		}
 	}
