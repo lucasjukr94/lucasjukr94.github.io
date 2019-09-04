@@ -1,0 +1,25 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="load">0</div>
+<script>
+var div;
+$(document).ready(function(){
+	
+	div = document.getElementById("load");
+	
+	let gyroscope = new Gyroscope({frequency: 60});
+
+	gyroscope.addEventListener('reading', e => {
+	  alert("Angular velocety along the X-axis " + gyroscope.x);
+	  alert("Angular velocety along the Y-axis " + gyroscope.y);
+	  alert("Angular velocety along the Z-axis " + gyroscope.z);
+	});
+	gyroscope.start();
+
+});
+</script>
+</body>
+</html>
