@@ -47,37 +47,33 @@ function load(){
 	}
 	
 }
-
 function deviceMotionHandler(eventData) {
   var info, xyz = "[X, Y, Z]";
-
   // Grab the acceleration from the results
   var acceleration = eventData.acceleration;
-  info = xyz.replace("X", acceleration.x);
-  info = info.replace("Y", acceleration.y);
-  info = info.replace("Z", acceleration.z);
+  info = xyz.replace("X", Math.round(acceleration.x*10)/100);
+  info = info.replace("Y", Math.round(acceleration.y*10)/100);
+  info = info.replace("Z", Math.round(acceleration.z*10)/100);
   document.getElementById("moAccel").innerHTML = info;
 	
   // Grab the acceleration including gravity from the results
   acceleration = eventData.accelerationIncludingGravity;
-  info = xyz.replace("X", acceleration.x);
-  info = info.replace("Y", acceleration.y);
-  info = info.replace("Z", acceleration.z);
+  info = xyz.replace("X", Math.round(acceleration.x*10)/100);
+  info = info.replace("Y", Math.round(acceleration.y*10)/100);
+  info = info.replace("Z", Math.round(acceleration.z*10)/100);
   document.getElementById("moAccelGrav").innerHTML = info;
-
   // Grab the rotation rate from the results
   var rotation = eventData.rotationRate;
-  info = xyz.replace("X", rotation.alpha);
-  info = info.replace("Y", rotation.beta);
-  info = info.replace("Z", rotation.gamma);
+  info = xyz.replace("X", Math.round(rotation.alpha*10)/100);
+  info = info.replace("Y", Math.round(rotation.beta*10)/100);
+  info = info.replace("Z", Math.round(rotation.gamma*10)/100);
   document.getElementById("moRotation").innerHTML = info;
-
   // // Grab the refresh interval from the results
   info = eventData.interval;
   document.getElementById("moInterval").innerHTML = info;       
 	
-  bola.style.top = Math.round(acceleration.x*10)/100+"px";
-  bola.style.right = Math.round(acceleration.y*10)/100+"px";
+  bola.style.top = (Math.round(acceleration.x*10)/100+100)+"px";
+  bola.style.left = (Math.round(acceleration.y*10)/100+100)+"px";
 }
 </script>
 </body>
