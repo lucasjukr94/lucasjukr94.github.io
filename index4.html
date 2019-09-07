@@ -4,6 +4,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body onLoad="load();">
+	<div style="background-color:red;border:solid thin black;position:absolute;width:50px;height:50px;" id="bola"></div>
 <div class="main">
   <h2>Device Motion</h2>
   <table>
@@ -31,7 +32,10 @@
 </div>
 
 <script>
+	var bola;
 function load(){
+	bola = document.getElementById("bola");
+	
 	window.addEventListener('deviceorientation', function(event) {
 	  console.log(event.alpha + ' : ' + event.beta + ' : ' + event.gamma);
 	});
@@ -54,6 +58,9 @@ function deviceMotionHandler(eventData) {
   info = info.replace("Z", acceleration.z);
   document.getElementById("moAccel").innerHTML = info;
 
+	bola.style.top = acceleration.x+"px";
+	bola.style.right = acceleration.y+"px";
+	
   // Grab the acceleration including gravity from the results
   acceleration = eventData.accelerationIncludingGravity;
   info = xyz.replace("X", acceleration.x);
