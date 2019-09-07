@@ -57,9 +57,6 @@ function deviceMotionHandler(eventData) {
   info = info.replace("Y", acceleration.y);
   info = info.replace("Z", acceleration.z);
   document.getElementById("moAccel").innerHTML = info;
-
-	bola.style.top = acceleration.x+"px";
-	bola.style.right = acceleration.y+"px";
 	
   // Grab the acceleration including gravity from the results
   acceleration = eventData.accelerationIncludingGravity;
@@ -78,6 +75,9 @@ function deviceMotionHandler(eventData) {
   // // Grab the refresh interval from the results
   info = eventData.interval;
   document.getElementById("moInterval").innerHTML = info;       
+	
+  bola.style.top = Math.round(acceleration.x*10)/100+"px";
+  bola.style.right = Math.round(acceleration.y*10)/100+"px";
 }
 </script>
 </body>
