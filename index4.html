@@ -6,6 +6,14 @@
 <body onLoad="load();">
 	<div style="background-color:red;border:solid thin black;position:absolute;width:50px;height:250px;transform: rotate(0deg);transform-origin: bottom left;" id="bola"></div>
 	<div style="background-color:blue;border:solid thin black;position:absolute;width:50px;height:250px;transform: rotate(0deg);transform-origin: bottom left;" id="bolaGyro"></div>
+	
+	<div style="background-color:yellow;width:10px;height:10px;position:absolute;top:400px;left:400px;" id="accx"></div>
+	<div style="background-color:orange;width:10px;height:10px;position:absolute;top:400px;left:400px;" id="accy"></div>
+	<div style="background-color:green;width:10px;height:10px;position:absolute;top:400px;left:400px;" id="accz"></div>
+	
+	<div style="background-color:yellow;width:10px;height:10px;position:absolute;top:600px;left:400px;" id="gyx"></div>
+	<div style="background-color:orange;width:10px;height:10px;position:absolute;top:600px;left:400px;" id="gyy"></div>
+	<div style="background-color:green;width:10px;height:10px;position:absolute;top:600px;left:400px;" id="gyz"></div>
 <div class="main">
   <h2>Device Motion</h2>
   <table>
@@ -35,6 +43,9 @@
 <script>
 	var bola;
 	var bolaGyro;
+	
+	var accx,accy,accz;
+	var gyx,gyy,gyz;
 function load(){
 	bola = document.getElementById("bola");
 	bolaGyro = document.getElementById("bolaGyro");
@@ -54,36 +65,44 @@ function deviceMotionHandler(eventData) {
   var info, xyz = "[X, Y, Z]";
   // Grab the acceleration from the results
   var acceleration = eventData.acceleration;
-  info = xyz.replace("X", Math.round(acceleration.x*300)/100);
-  info = info.replace("Y", Math.round(acceleration.y*300)/100);
-  info = info.replace("Z", Math.round(acceleration.z*300)/100);
+  info = xyz.replace("X", Math.round(acceleration.x*200)/100);
+  info = info.replace("Y", Math.round(acceleration.y*200)/100);
+  info = info.replace("Z", Math.round(acceleration.z*200)/100);
   document.getElementById("moAccel").innerHTML = info;
 	
   // Grab the acceleration including gravity from the results
   acceleration = eventData.accelerationIncludingGravity;
-  info = xyz.replace("X", Math.round(acceleration.x*300)/100);
-  info = info.replace("Y", Math.round(acceleration.y*300)/100);
-  info = info.replace("Z", Math.round(acceleration.z*300)/100);
+  info = xyz.replace("X", Math.round(acceleration.x*200)/100);
+  info = info.replace("Y", Math.round(acceleration.y*200)/100);
+  info = info.replace("Z", Math.round(acceleration.z*200)/100);
   document.getElementById("moAccelGrav").innerHTML = info;
   // Grab the rotation rate from the results
   var rotation = eventData.rotationRate;
-  info = xyz.replace("X", Math.round(rotation.alpha*300)/100);
-  info = info.replace("Y", Math.round(rotation.beta*300)/100);
-  info = info.replace("Z", Math.round(rotation.gamma*300)/100);
+  info = xyz.replace("X", Math.round(rotation.alpha*200)/100);
+  info = info.replace("Y", Math.round(rotation.beta*200)/100);
+  info = info.replace("Z", Math.round(rotation.gamma*200)/100);
   document.getElementById("moRotation").innerHTML = info;
   
-  bola.style.transform = "rotate("+Math.round(rotation.alpha*300)/100+"deg)";
-  bolaGyro.style.transform = "rotate("+Math.round(rotation.alpha*300)/100+"deg)";
+  bola.style.transform = "rotate("+Math.round(rotation.alpha*200)/100+"deg)";
+  bolaGyro.style.transform = "rotate("+Math.round(rotation.alpha*200)/100+"deg)";
   
   // // Grab the refresh interval from the results
   info = eventData.interval;
   document.getElementById("moInterval").innerHTML = info;       
 	
-  bola.style.top = (Math.round(acceleration.x*300)/100+100)+"px";
-  bola.style.left = (Math.round(acceleration.y*300)/100+100)+"px";
+  bola.style.top = (Math.round(acceleration.x*200)/100+100)+"px";
+  bola.style.left = (Math.round(acceleration.y*200)/100+100)+"px";
   
   bolaGyro.style.top = (Math.round(rotation.alpha*200)/100+200)+"px";
   bolaGyro.style.left = (Math.round(rotation.beta*200)/100+200)+"px";
+  
+  accx.style.width = (Math.round(acceleration.x*200)/100+100)+"px";
+  accy.style.height = (Math.round(acceleration.y*200)/100+100)+"px";
+  accz.style.height = (Math.round(acceleration.z*200)/100+100)+"px";
+  
+  gyx.style.width = (Math.round(rotation.alpha*200)/100+100)+"px";
+  gyy.style.height = (Math.round(rotation.beta*200)/100+100)+"px";
+  gyz.style.height = (Math.round(rotation.gama*200)/100+100)+"px";
 }
 </script>
 </body>
