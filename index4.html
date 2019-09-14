@@ -50,6 +50,14 @@ function load(){
 	bola = document.getElementById("bola");
 	bolaGyro = document.getElementById("bolaGyro");
 	
+	accx = document.getElementById("accx");
+	accy = document.getElementById("accy");
+	accz = document.getElementById("accz");
+	
+	gyx = document.getElementById("gyx");
+	gyy = document.getElementById("gyy");
+	gyz = document.getElementById("gyz");
+	
 	window.addEventListener('deviceorientation', function(event) {
 	  console.log(event.alpha + ' : ' + event.beta + ' : ' + event.gamma);
 	});
