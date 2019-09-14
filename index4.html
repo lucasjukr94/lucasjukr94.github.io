@@ -91,7 +91,7 @@ function deviceMotionHandler(eventData) {
   info = info.replace("Z", Math.round(rotation.gamma*200)/100);
   document.getElementById("moRotation").innerHTML = info;
   
-  bola.style.transform = "rotate("+Math.round(rotation.alpha*200)/100+"deg)";
+  bola.style.transform = "rotate("+Math.round(acceleration.x*200)/100+"deg)";
   bolaGyro.style.transform = "rotate("+Math.round(rotation.alpha*200)/100+"deg)";
   
   // // Grab the refresh interval from the results
