@@ -105,11 +105,11 @@ function deviceMotionHandler(eventData) {
   bolaGyro.style.left = (Math.round(rotation.beta*200)/100+200)+"px";
   
   accx.style.width = (Math.round(acceleration.x*200)/100+100)+"px";
-  accy.style.height = (Math.round(acceleration.y*200)/100+100)+"px";
+  accy.style.height = (-Math.round(acceleration.y*200)/100+100)+"px";
   accz.style.height = (Math.round(acceleration.z*200)/100+100)+"px";
   
   gyx.style.width = (Math.round(rotation.alpha*200)/100+100)+"px";
-  gyy.style.height = (Math.round(rotation.beta*200)/100+100)+"px";
+  gyy.style.height = (-Math.round(rotation.beta*200)/100+100)+"px";
   gyz.style.height = (Math.round(rotation.gama*200)/100+100)+"px";
 }
 </script>
