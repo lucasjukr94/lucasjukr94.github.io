@@ -54,6 +54,8 @@
 
   }
 
+  var jutsuCombo = [];
+  var currentSign = "";
   // When we get a result
   function gotResult(error, results) {
     // If there is an error
@@ -64,10 +66,39 @@
     // The results are in an array ordered by confidence.
     // console.log(results[0]);
     label = results[0].label;
+	if (label != currentSign){
+		currentSign = label;
+		if(!jutsuCombo.includes()){
+			jutsuCombo.push(label);
+			jutsuCast();
+		}
+	}
     // Classifiy again!
     classifyVideo();
   }
+  
+  function jutsuCast(){
+	var katon = jutsuCombo.includes("Mi", "Saru", "Uma", "Tora");
+	var suiton = jutsuCombo.includes("Ne", "Ushi", "Tora", "U", "Inu");
+	var doton = jutsuCombo.includes("I", "Hitsuji", "Tatsu", "Tori", "Tora");
+	var hasCast = (katon || suiton || doton );
+	
+	if (katon){
+		document.getElementById("jutsu").innerText = "katon";
+	}
+	else if (suiton){
+		document.getElementById("jutsu").innerText = "suiton";
+	}
+	else if (doton){
+		document.getElementById("jutsu").innerText = "doton";
+	}
+	
+	if (hasCast){
+		jutsuCombo = [];
+	}
+  }
 </script>
 <img src="narutohandsign.JPG" width=500 height=500/>
+<div id="jutsu"></div>
 </body>
 </html>
