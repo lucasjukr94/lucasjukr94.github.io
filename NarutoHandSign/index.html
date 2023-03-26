@@ -65,12 +65,14 @@
         }
         // The results are in an array ordered by confidence.
         // console.log(results[0]);
-        label = results[0].label;
-        if (label != currentSign) {
-            currentSign = label;
-            if (!jutsuCombo.includes(label)) {
-                jutsuCombo.push(label);
-                jutsuCast();
+        if (results[0].confidence > 0.85){
+            label = results[0].label;
+            if (label != currentSign) {
+                currentSign = label;
+                if (!jutsuCombo.includes(label)) {
+                    jutsuCombo.push(label);
+                    jutsuCast();
+                }
             }
         }
         // Classifiy again!
